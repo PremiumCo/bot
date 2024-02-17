@@ -1,6 +1,8 @@
 import { ticketLogsChannel } from '../../../../config.json';
 import { EmbedBuilder } from 'discord.js';
 
+import * as discordTranscripts from 'discord-html-transcripts';
+
 module.exports = {
     name: 'close',
     async execute(interaction) {
@@ -15,14 +17,21 @@ module.exports = {
             })
             .setTimestamp();
 
-        await interaction.guild.channels
-            .fetch(ticketLogsChannel)
-            .then((channel) =>
-                channel.send({
-                    embeds: [ticketClosedLogEmbed]
-                })
-            );
+        try {
+            const attachment = await discordTranscripts.createTranscript(interaction.channel);
 
-        interaction.channel.delete('Ticket closed.');
+            await interaction.guild.channels
+                .fetch(ticketLogsChannel)
+                .then((channel) =>
+                    channel.send({
+                        embeds: [ticketClosedLogEmbed],
+                        files: [attachment]
+                    })
+                );
+
+            interaction.channel.delete('Ticket closed.');
+        } catch (error) {
+            interaction.reply('An error occured while attempting to close the ticket.')
+        }
     }
 };
