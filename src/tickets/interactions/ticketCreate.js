@@ -8,8 +8,6 @@ module.exports = {
     async execute(interaction) {
         const ticketOptionsType = interaction.customId.split(':')[2];
 
-        // list the questions, the results, and the ticket type
-
         const modalResults = [];
 
         interaction.fields.fields.map((field) => {
