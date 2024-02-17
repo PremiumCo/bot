@@ -3,9 +3,25 @@ import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { Client, Collection, GatewayIntentBits } from 'discord.js';
+import {
+    Client,
+    Collection,
+    GatewayIntentBits,
+    ActivityType
+} from 'discord.js';
 
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({
+    intents: [GatewayIntentBits.Guilds],
+    presence: {
+        status: 'online',
+        activities: [
+            {
+                name: 'gg/premiumplatforming',
+                type: ActivityType.Listening
+            }
+        ]
+    }
+});
 
 // Command files
 client.commands = new Collection();

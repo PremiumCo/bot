@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import { ticketCategory } from '../../../config.json';
-import closeTicket from '../../tickets/shared/closeTicket'
+import closeTicket from '../../tickets/shared/closeTicket';
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -22,7 +22,7 @@ module.exports = {
                 ],
                 ephemeral: true
             });
-        
+
         interaction.deferReply();
         await closeTicket(interaction);
     }
