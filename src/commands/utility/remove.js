@@ -44,7 +44,7 @@ module.exports = {
 
         if (!userInTicket)
             return interaction.reply({
-                embeds: [errorEmbed('User is not in the ticket.')],
+                embeds: [errorEmbed('User is not in the ticket')],
                 ephemeral: true
             });
 

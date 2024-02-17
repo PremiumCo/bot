@@ -74,9 +74,7 @@ module.exports = {
         };
 
         const modal = new ModalBuilder()
-            .setCustomId(
-                `ticket:create:${ticketType}`
-            )
+            .setCustomId(`ticket:create:${ticketType}`)
             .setTitle(`Create Ticket`);
 
         function getQuestions(ticketType) {
@@ -86,8 +84,14 @@ module.exports = {
                         .setCustomId(question.label)
                         .setLabel(question.label)
                         .setStyle(question.style)
-                        .setPlaceholder(question.placeholder ? question.placeholder : '')
-                        .setMaxLength(question.style === TextInputStyle.Paragraph ? 1000 : 100)
+                        .setPlaceholder(
+                            question.placeholder ? question.placeholder : ''
+                        )
+                        .setMaxLength(
+                            question.style === TextInputStyle.Paragraph
+                                ? 1000
+                                : 100
+                        )
                 );
             });
         }
@@ -95,13 +99,13 @@ module.exports = {
         modal.addComponents(getQuestions(ticketType));
 
         await interaction.showModal(modal).then(async () => {
-                const ticketInteractionMessage =
-                    await interaction.channel.messages.fetch(
-                        interaction.message.id
-                    );
+            const ticketInteractionMessage =
+                await interaction.channel.messages.fetch(
+                    interaction.message.id
+                );
 
-                // Update the message with a new StringSelectMenu
-                ticketInteractionMessage.edit(ticketSetupEmbed);
-        })
+            // Update the message with a new StringSelectMenu
+            ticketInteractionMessage.edit(ticketSetupEmbed);
+        });
     }
 };

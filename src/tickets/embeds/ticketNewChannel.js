@@ -11,7 +11,7 @@ const embed = (interaction, modalResults) => {
         .setTitle('New Ticket Created')
         .setDescription(
             `Thanks for creating a ticket. You will be assisted shortly.`
-    )
+        )
         .addFields(
             modalResults.map((result) => ({
                 name: result.label,

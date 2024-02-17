@@ -14,7 +14,7 @@ const closeConfirmOptions = new ActionRowBuilder().addComponents(
     new ButtonBuilder()
         .setCustomId('ticket:close')
         .setLabel('Confirm')
-        .setStyle(ButtonStyle.Danger),
+        .setStyle(ButtonStyle.Danger)
     /*
     new ButtonBuilder()
         .setCustomId('ticket:close-cancel')
