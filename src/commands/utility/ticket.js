@@ -4,7 +4,7 @@ import ticketSetupEmbed from '../../tickets/embeds/ticketSetup';
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ticket')
-        .setDescription('Replies with Pong!'),
+        .setDescription('Creates a new ticket setup.'),
     async execute(interaction) {
         // Prevents there from being a reply sent.
         interaction.deferReply();
