@@ -1,4 +1,4 @@
-import { ticketCategory } from '../../../config.json';
+import { ticketCategory, supportRoleId } from '../../../config.json';
 import { EmbedBuilder } from 'discord.js';
 
 import ticketNewChannelEmbed from '../embeds/ticketNewChannel';
@@ -18,7 +18,7 @@ module.exports = {
                 value: field.value
             });
         });
-        
+
         interaction.guild.channels
             .create({
                 name: `${ticketOptionsType}-${interaction.user.username}`,
@@ -36,6 +36,14 @@ module.exports = {
                     {
                         id: interaction.guild.roles.everyone,
                         deny: ['ViewChannel']
+                    },
+                    {
+                        id: supportRoleId,
+                        allow: [
+                            'ViewChannel',
+                            'SendMessages',
+                            'ReadMessageHistory'
+                        ]
                     }
                 ]
             })
