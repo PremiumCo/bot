@@ -1,0 +1,24 @@
+{
+    "name": "premium-bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "tsx watch ./src/index.js",
+        "build": "tsc",
+        "start": "node src/index.js",
+        "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@supabase/supabase-js": "^2.39.4",
+        "discord.js": "^14.14.1"
+    },
+    "devDependencies": {
+        "dotenv": "^16.4.4",
+        "prettier": "^3.2.5",
+        "tsx": "^4.7.1"
+    }
+}
