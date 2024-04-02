@@ -2,7 +2,7 @@
 //import ticketSetupEmbed from '../../tickets/embeds/ticketSetup';
 //import { supportRoleId } from '../../../config.json';
 
-const { SlashCommandBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const ticketSetupEmbed = require('../../tickets/embeds/ticketSetup');
 const { supportRoleId } = require('../../../config.json');
 
