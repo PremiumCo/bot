@@ -1,8 +1,14 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import { readdir } from 'node:fs/promises';
+//import fs from 'node:fs';
+//import path from 'node:path';
+//import { readdir } from 'node:fs/promises';
 
-import { Events } from 'discord.js';
+//import { Events } from 'discord.js';
+
+const fs = require('fs');
+const path = require('path');
+const { readdir } = require('fs').promises;
+
+const { Events } = require('discord.js');
 
 module.exports = {
     name: Events.InteractionCreate,

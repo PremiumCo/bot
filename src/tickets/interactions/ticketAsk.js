@@ -1,3 +1,4 @@
+/*
 import { ticketCategory } from '../../../config.json';
 import {
     EmbedBuilder,
@@ -10,6 +11,14 @@ import {
 
 import ticketSetupEmbed from '../embeds/ticketSetup';
 import ticketNewChannelEmbed from '../embeds/ticketNewChannel';
+*/
+
+const { ticketCategory } = require('../../../config.json');
+
+const { EmbedBuilder, ModalBuilder, Events, TextInputBuilder, TextInputStyle, ActionRowBuilder } = require('discord.js');
+
+const ticketSetupEmbed = require('../embeds/ticketSetup');
+const ticketNewChannelEmbed = require('../embeds/ticketNewChannel');
 
 module.exports = {
     name: 'ask',

@@ -1,6 +1,10 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
-import { ticketCategory } from '../../../config.json';
-import closeTicket from '../../tickets/shared/closeTicket';
+//import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+//import { ticketCategory } from '../../../config.json';
+//import closeTicket from '../../tickets/shared/closeTicket';
+
+const { SlashCommandBuilder } = require('discord.js');
+const { ticketCategory } = require('../../../config.json');
+const closeTicket = require('../../tickets/shared/closeTicket');
 
 module.exports = {
     data: new SlashCommandBuilder()

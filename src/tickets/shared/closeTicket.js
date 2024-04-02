@@ -1,6 +1,10 @@
-import { EmbedBuilder } from 'discord.js';
-import * as discordTranscripts from 'discord-html-transcripts';
-import { ticketLogsChannel } from '../../../config.json';
+//import { EmbedBuilder } from 'discord.js';
+//import * as discordTranscripts from 'discord-html-transcripts';
+//import { ticketLogsChannel } from '../../../config.json';
+
+const { EmbedBuilder } = require('discord.js');
+const discordTranscripts = require('discord-html-transcripts');
+const { ticketLogsChannel } = require('../../../config.json');
 
 async function closeTicket(interaction) {
     const ticketClosedLogEmbed = new EmbedBuilder()
@@ -36,4 +40,6 @@ async function closeTicket(interaction) {
     }
 }
 
-module.exports = closeTicket;
+module.exports = {
+    closeTicket
+}

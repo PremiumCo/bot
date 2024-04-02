@@ -1,9 +1,13 @@
+/*
 import {
     EmbedBuilder,
     ActionRowBuilder,
     ButtonBuilder,
     ButtonStyle
 } from 'discord.js';
+*/
+
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 const embed = (interaction, modalResults) => {
     const newChannelEmbed = new EmbedBuilder()

@@ -1,4 +1,6 @@
-import ticketClosePanelEmbed from '../../embeds/ticketClosePanel';
+//import ticketClosePanelEmbed from '../../embeds/ticketClosePanel';
+
+const ticketClosePanelEmbed = require('../../embeds/ticketClosePanel');
 
 module.exports = {
     name: 'close-panel',

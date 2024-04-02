@@ -1,6 +1,10 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
-import ticketSetupEmbed from '../../tickets/embeds/ticketSetup';
-import { supportRoleId } from '../../../config.json';
+//import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+//import ticketSetupEmbed from '../../tickets/embeds/ticketSetup';
+//import { supportRoleId } from '../../../config.json';
+
+const { SlashCommandBuilder } = require('discord.js');
+const ticketSetupEmbed = require('../../tickets/embeds/ticketSetup');
+const { supportRoleId } = require('../../../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()

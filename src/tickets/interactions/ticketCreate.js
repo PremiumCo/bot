@@ -1,7 +1,12 @@
-import { ticketCategory, supportRoleId } from '../../../config.json';
-import { EmbedBuilder } from 'discord.js';
+//import { ticketCategory, supportRoleId } from '../../../config.json';
+//import { EmbedBuilder } from 'discord.js';
 
-import ticketNewChannelEmbed from '../embeds/ticketNewChannel';
+//import ticketNewChannelEmbed from '../embeds/ticketNewChannel';
+
+const { ticketCategory, supportRoleId } = require('../../../config.json');
+const { EmbedBuilder } = require('discord.js');
+
+const ticketNewChannelEmbed = require('../embeds/ticketNewChannel');
 
 module.exports = {
     name: 'create',

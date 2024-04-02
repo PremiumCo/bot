@@ -1,5 +1,8 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
-import { ticketCategory, supportRoleId } from '../../../config.json';
+//import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+//import { ticketCategory, supportRoleId } from '../../../config.json';
+
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { ticketCategory, supportRoleId } = require('../../../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()

@@ -1,9 +1,13 @@
+/*
 import {
     EmbedBuilder,
     StringSelectMenuBuilder,
     StringSelectMenuOptionBuilder,
     ActionRowBuilder
 } from 'discord.js';
+*/
+
+const { EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require('discord.js');
 
 const troubleshooterEmbed = new EmbedBuilder()
     .setColor('#2f3137')

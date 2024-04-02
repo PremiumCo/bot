@@ -1,14 +1,26 @@
-import 'dotenv/config';
+//import 'dotenv/config';
+require('dotenv').config();
 
-import fs from 'node:fs';
-import path from 'node:path';
 
+const fs = require('fs');
+const path = require('path');
+
+//import fs from 'node:fs';
+//import path from 'node:path';
+
+const { fileURLToPath } = require('node:url');
+const { dirname } = require('node:path');
+
+/*
 import {
     Client,
     Collection,
     GatewayIntentBits,
     ActivityType
 } from 'discord.js';
+*/
+
+const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds],
@@ -22,6 +34,9 @@ const client = new Client({
         ]
     }
 });
+
+//const __filename = fileURLToPath(import.meta.url);
+//const __dirname = dirname(__filename);
 
 // Command files
 client.commands = new Collection();
