@@ -28,11 +28,9 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('question')
             .setDescription('Questions about products.'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Product Purchasing')
-            .setValue('purchase')
-            .setDescription(
-                'Purchasing products with USD or other currencies.'
-            ),
+            .setLabel('License Transfers')
+            .setValue('transfer')
+            .setDescription('Transfering your product licenses to other accounts.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')

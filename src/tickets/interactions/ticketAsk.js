@@ -62,15 +62,15 @@ module.exports = {
                     placeholder: 'Please describe your question in detail.'
                 }
             ],
-            purchase: [
+            transfer: [
                 {
-                    label: 'Are you looking to pay with USD?',
+                    label: 'What product(s) would you like to transfer?',
+                    placeholder: 'Product Name',
                     style: TextInputStyle.Short
                 },
                 {
-                    label: 'What product(s) are you looking to purchase?',
+                    label: 'What is the username of the person you are transferring to?',
                     style: TextInputStyle.Short,
-                    placeholder: 'Product Name'
                 }
             ],
             other: [
