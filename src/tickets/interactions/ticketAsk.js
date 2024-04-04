@@ -69,7 +69,7 @@ module.exports = {
                     style: TextInputStyle.Short
                 },
                 {
-                    label: 'What is the username of the person you are transferring to?',
+                    label: 'Who would you like to transfer to?',
                     style: TextInputStyle.Short,
                 }
             ],
