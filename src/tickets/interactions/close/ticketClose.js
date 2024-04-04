@@ -1,6 +1,6 @@
 //import closeTicket from '../../shared/closeTicket';
 
-const { closeTicket } = require('../../shared/closeTicket');
+const closeTicket = require('../../shared/closeTicket');
 
 module.exports = {
     name: 'close',

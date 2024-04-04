@@ -40,6 +40,4 @@ async function closeTicket(interaction) {
     }
 }
 
-module.exports = {
-    closeTicket
-}
+module.exports = closeTicket;
