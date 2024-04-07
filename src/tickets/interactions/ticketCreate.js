@@ -8,6 +8,34 @@ const { EmbedBuilder } = require('discord.js');
 
 const ticketNewChannelEmbed = require('../embeds/ticketNewChannel');
 
+const fetch = (...args) =>
+    import('node-fetch').then(({ default: fetch }) => fetch(...args));
+
+async function getProductData() {
+    const API_Server = 'https://api.onpointrblx.com/vendr/v2';
+    const API_Endpoint = '/hubs/getinfo';
+
+    const response = await fetch(
+        `${API_Server}${API_Endpoint}?apitoken=${process.env.VENDR_API_KEY}`
+    );
+
+    const data = await response.json();
+
+    if (data.error) {
+        return console.error(data.error);
+    }
+
+    const productTable = {};
+
+    data.Products.forEach((product) => {
+        productTable[product._id] = product.Name;
+    });
+
+    return productTable;
+}
+
+let productTable;
+
 module.exports = {
     name: 'create',
     async execute(interaction) {
@@ -73,6 +101,38 @@ module.exports = {
 
                 // Ping the interaction user and then delete the message
                 c.send(`<@${interaction.user.id}>`).then((m) => m.delete());
+
+                // Get the users owned products from api
+                const API_Server = 'https://api.onpointrblx.com/vendr/v2';
+                const API_Endpoint = `/users/getinfo/discord/${interaction.user.id}`;
+
+                const response = await fetch(
+                    `${API_Server}${API_Endpoint}?apitoken=${process.env.VENDR_API_KEY}`
+                );
+
+                const data = await response.json();
+
+                if (data.error) {
+                    return console.error(data.error);
+                }
+
+                if (data.Licences.length === 0) {
+                    return c.send('No owned products found.');
+                }
+
+                if (productTable === undefined) {
+                    productTable = await getProductData();
+                }
+
+                let ownedProducts = [];
+
+                data.Licences.forEach(licence => {
+                    if (productTable.hasOwnProperty(licence.Product)) {
+                        ownedProducts.push(productTable[licence.Product]);
+                    }
+                });
+
+                c.send(`**Owned Products**\n\`\`\`${ownedProducts.join('\n')}\`\`\``);
             });
     }
 };

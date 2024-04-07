@@ -1,7 +1,6 @@
 //import 'dotenv/config';
 require('dotenv').config();
 
-
 const fs = require('fs');
 const path = require('path');
 
@@ -20,7 +19,13 @@ import {
 } from 'discord.js';
 */
 
-const { Client, Collection, GatewayIntentBits, ActivityType } = require('discord.js');
+const {
+    Client,
+    Collection,
+    GatewayIntentBits,
+    ActivityType
+} = require('discord.js');
+const { get } = require('http');
 
 const client = new Client({
     intents: [GatewayIntentBits.Guilds],
