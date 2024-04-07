@@ -29,7 +29,7 @@ const embed = (interaction, modalResults) => {
         .setTimestamp()
         .setImage(
             'https://us-east-1.tixte.net/uploads/nov.has.rocks/pbanner.png'
-        );
+    );
 
     const newChannelOptions = new ButtonBuilder()
         .setCustomId('ticket:close-panel')

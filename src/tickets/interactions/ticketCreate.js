@@ -96,7 +96,7 @@ module.exports = {
                     ephemeral: true
                 });
 
-                // New Channel Embed
+                // Send new channel message
                 c.send(ticketNewChannelEmbed(interaction, modalResults));
 
                 // Ping the interaction user and then delete the message
@@ -117,7 +117,7 @@ module.exports = {
                 }
 
                 if (data.Licences.length === 0) {
-                    return c.send('No owned products found.');
+                    return c.send('No products found for this user.');
                 }
 
                 if (productTable === undefined) {
@@ -132,7 +132,16 @@ module.exports = {
                     }
                 });
 
-                c.send(`**Owned Products**\n\`\`\`${ownedProducts.join('\n')}\`\`\``);
+                return c.send(
+                    `> **Owned Products:**\n${ownedProducts.map((product) => `- ${product}`).join('\n')}`
+                );
+
+            /*
+                            {
+                name: 'Owned Products',
+                value: ownedProducts ? ownedProducts.map((product) => `- ${product.name}`).join('\n') : 'None'
+            }
+            */
             });
     }
 };
