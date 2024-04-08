@@ -1,0 +1,14 @@
+{
+    "streaming_enabled": {
+            "name": "Streaming Enabled",
+            "content": "To ensure you can see our UIs, make sure streaming_enabled is set to false. Here's how to do that:\n\n1. Click on \"Workspace\"\n2. Navigate to the \"Properties\" tab\n3. Find \"Streaming Enabled\" and uncheck the box to disable it"
+    },
+    "studio_testing": {
+        "name": "Studio Testing",
+        "content": "Testing inside Roblox Studio is not supported by our products. Please publish your game and perform testing through that platform instead."
+    },
+    "http_enabled": {
+        "name": "HTTP Enabled",
+        "content": "Our products require HTTP requests to be enabled. Here's how to do that:\n\n1. Click on \"Game Settings\"\n2. Go to \"Security\"\n3. Turn on \"Allow HTTP Requests\""
+    }
+}
