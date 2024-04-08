@@ -14,10 +14,10 @@ module.exports = {
                 .setDescription('The priority of the ticket')
                 .setRequired(true)
                 .addChoices(
-                    { name: 'Low', value: 'low' },
-                    { name: 'Medium', value: 'medium' },
-                    { name: 'High', value: 'high' }
-            )
+                    { name: 'Low - Any Team Member', value: 'low' },
+                    { name: 'Medium - Ownership Assist/Management', value: 'medium' },
+                    { name: 'High - Ownership', value: 'high' }
+                )
         ),
     async execute(interaction) {
         function errorEmbed(message) {
@@ -45,7 +45,7 @@ module.exports = {
                 ],
                 ephemeral: true
             });
-        
+
         const priority = interaction.options.getString('priority');
 
         // make it so that the priority uses green, yellow, and red emojis
@@ -55,8 +55,12 @@ module.exports = {
             medium: '🟡',
             high: '🔴'
         };
-        
-        if (interaction.channel.name.startsWith('🟢') || interaction.channel.name.startsWith('🟡') || interaction.channel.name.startsWith('🔴')) {
+
+        if (
+            interaction.channel.name.startsWith('🟢') ||
+            interaction.channel.name.startsWith('🟡') ||
+            interaction.channel.name.startsWith('🔴')
+        ) {
             interaction.channel.setName(
                 `${priorityEmojis[priority]}-${interaction.channel.name.slice(2)}`
             );
