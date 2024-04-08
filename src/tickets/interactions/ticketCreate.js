@@ -133,7 +133,7 @@ module.exports = {
                 });
 
                 return c.send(
-                    `> **Owned Products:**\n${ownedProducts.map((product) => `- ${product}`).join('\n')}`
+                    `> **Owned Products:**\n${ownedProducts.map((product) => `> - ${product}`).join('\n')}`
                 );
 
             /*

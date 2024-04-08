@@ -1,3 +1,4 @@
+/*
 import 'dotenv/config';
 import { guildId, clientId } from '../config.json';
 
@@ -5,6 +6,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { REST, Routes } from 'discord.js';
+*/
+require('dotenv').config();
+const { guildId, clientId } = require('../config.json');
+
+const fs = require('fs');
+const path = require('path');
+
+const { REST, Routes } = require('discord.js');
 
 const commands = [];
 // Grab all the command folders from the commands directory you created earlier
