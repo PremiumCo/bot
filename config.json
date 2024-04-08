@@ -3,5 +3,8 @@
     "clientId": "1224781941354528910",
     "ticketCategory": "1224782837505462342",
     "ticketLogsChannel": "953140149129207858",
-    "supportRoleId": "841785398997155900"
+    "supportRoleId": "841785398997155900",
+    "managementRoleId": "989204863005110303",
+    "ownershipAssistantRoleId": "841785397293481995",
+    "ownerRoleId": "841777138955845682"
 }

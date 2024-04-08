@@ -2,7 +2,13 @@
 //import { ticketCategory, supportRoleId } from '../../../config.json';
 
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-const { ticketCategory, supportRoleId } = require('../../../config.json');
+const {
+    ticketCategory,
+    supportRoleId,
+    managementRoleId,
+    ownershipAssistantRoleId,
+    ownerRoleId
+} = require('../../../config.json');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -69,6 +75,44 @@ module.exports = {
                 `${priorityEmojis[priority]}-${interaction.channel.name}`
             );
         }
+
+        // Change which roles have permission to access the ticket.
+        // Low priority should be supportRoleId, medium should be ownershipAssistantRoleId and managementRoleId, and high should be ownerRoleId
+        // Remove permission for the others when changed
+
+        /*
+        if (priority === 'low') {
+            interaction.channel.permissionOverwrites.set(supportRoleId, {
+                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            });
+
+            interaction.channel.permissionOverwrites.delete(ownershipAssistantRoleId);
+            interaction.channel.permissionOverwrites.delete(managementRoleId);
+            interaction.channel.permissionOverwrites.delete(ownerRoleId);
+        }
+
+        if (priority === 'medium') {
+            interaction.channel.permissionOverwrites.set(ownershipAssistantRoleId, {
+                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            });
+            interaction.channel.permissionOverwrites.set(managementRoleId, {
+                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            });
+
+            interaction.channel.permissionOverwrites.delete(supportRoleId);
+            interaction.channel.permissionOverwrites.delete(ownerRoleId);
+        }
+
+        if (priority === 'high') {
+            interaction.channel.permissionOverwrites.set(ownerRoleId, {
+                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            });
+
+            interaction.channel.permissionOverwrites.delete(supportRoleId);
+            interaction.channel.permissionOverwrites.delete(ownershipAssistantRoleId);
+            interaction.channel.permissionOverwrites.delete(managementRoleId);
+        }
+        */
 
         interaction.reply({
             embeds: [
