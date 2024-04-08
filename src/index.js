@@ -33,7 +33,7 @@ const client = new Client({
         status: 'online',
         activities: [
             {
-                name: 'gg/premiumplatforming',
+                name: 'Premium Customers',
                 type: ActivityType.Listening
             }
         ]
