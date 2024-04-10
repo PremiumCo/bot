@@ -37,6 +37,7 @@ const embed = (interaction, modalResults) => {
         .setStyle(ButtonStyle.Secondary);
 
     return {
+        content: `<@${interaction.user.id}>`,
         embeds: [newChannelEmbed],
         components: [new ActionRowBuilder().addComponents(newChannelOptions)]
     };

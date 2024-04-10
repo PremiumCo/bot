@@ -100,7 +100,7 @@ module.exports = {
                 c.send(ticketNewChannelEmbed(interaction, modalResults));
 
                 // Ping the interaction user and then delete the message
-                c.send(`<@${interaction.user.id}>`).then((m) => m.delete());
+                //c.send(`<@${interaction.user.id}>`).then((m) => m.delete());
 
                 // Get the users owned products from api
                 const API_Server = 'https://api.onpointrblx.com/vendr/v2';
