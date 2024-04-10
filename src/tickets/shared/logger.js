@@ -1,7 +1,8 @@
 const {
     ticketLogsChannel,
     ticketFeedbackChannel,
-    ticketTranscriptChannel
+    ticketTranscriptChannel,
+    guildId
 } = require('../../../config.json');
 
 const logMessage = async (interaction, message, logType) => {
@@ -13,7 +14,9 @@ const logMessage = async (interaction, message, logType) => {
         logChannel = ticketTranscriptChannel;
     }
 
-    await interaction.guild.channels
+    const guild = await interaction.client.guilds.fetch(guildId);
+
+    await guild.channels
         .fetch(logChannel)
         .then(channel =>
             channel.send(message)
