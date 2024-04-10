@@ -51,9 +51,8 @@ module.exports = {
     async execute(interaction) {
         const ticketCreator = interaction.message.mentions.users.first().id;
         const userData = await getUserData(ticketCreator);
-        
-        
-        if (userData.Licences.length === 0) {
+
+        if (userData.Licences == undefined) {
             return interaction.reply({
                 embeds: [
                     new EmbedBuilder()
@@ -78,16 +77,14 @@ module.exports = {
 
         return interaction.reply({
             embeds: [
-                new EmbedBuilder()
-                    .setColor('#2f3137')
-                    .addFields(
-                        {
-                            name: 'Products',
-                            value: ownedProducts.map((product) => `- ${product}`).join('\n')
-                        }
-                    )
+                new EmbedBuilder().setColor('#2f3137').addFields({
+                    name: 'Products',
+                    value: ownedProducts
+                        .map((product) => `- ${product}`)
+                        .join('\n')
+                })
             ],
             ephemeral: true
-        })
+        });
     }
 };
