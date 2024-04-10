@@ -80,10 +80,11 @@ module.exports = {
         // Low priority should be supportRoleId, medium should be ownershipAssistantRoleId and managementRoleId, and high should be ownerRoleId
         // Remove permission for the others when changed
 
-        /*
         if (priority === 'low') {
-            interaction.channel.permissionOverwrites.set(supportRoleId, {
-                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            interaction.channel.permissionOverwrites.create(supportRoleId, {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
             });
 
             interaction.channel.permissionOverwrites.delete(ownershipAssistantRoleId);
@@ -92,11 +93,15 @@ module.exports = {
         }
 
         if (priority === 'medium') {
-            interaction.channel.permissionOverwrites.set(ownershipAssistantRoleId, {
-                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            interaction.channel.permissionOverwrites.create(ownershipAssistantRoleId, {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
             });
-            interaction.channel.permissionOverwrites.set(managementRoleId, {
-                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            interaction.channel.permissionOverwrites.create(managementRoleId, {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
             });
 
             interaction.channel.permissionOverwrites.delete(supportRoleId);
@@ -104,15 +109,16 @@ module.exports = {
         }
 
         if (priority === 'high') {
-            interaction.channel.permissionOverwrites.set(ownerRoleId, {
-                allow: ['ViewChannel', 'SendMessages', 'ReadMessageHistory']
+            interaction.channel.permissionOverwrites.create(ownerRoleId, {
+                ViewChannel: true,
+                SendMessages: true,
+                ReadMessageHistory: true
             });
 
             interaction.channel.permissionOverwrites.delete(supportRoleId);
             interaction.channel.permissionOverwrites.delete(ownershipAssistantRoleId);
             interaction.channel.permissionOverwrites.delete(managementRoleId);
         }
-        */
 
         interaction.reply({
             embeds: [
