@@ -93,7 +93,7 @@ module.exports = {
                 }
 
                 autoRespond(modalResults[1], 'studio_testing', ['yes', 'yea', 'true', 'positive']);
-                autoRespond(modalResults[2], 'streaming_enabled', ['yes', 'yea', 'true', 'positive']);
+                autoRespond(modalResults[2], 'streaming_enabled', ['no', 'nope', 'nah', 'negative', 'false']);
                 autoRespond(modalResults[2], 'http_enabled', ['no', 'nope', 'nah', 'negative', 'false']);
                 autoRespond(modalResults[3], 'game_ownership', ['no', 'nope', 'nah', 'negative', 'false']);
             });
