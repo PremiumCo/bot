@@ -1,7 +1,7 @@
 {
     "streaming_enabled": {
             "name": "Streaming Enabled",
-            "content": "To ensure you can see our UIs, make sure streaming_enabled is set to false. Here's how to do that:\n\n1. Click on \"Workspace\"\n2. Navigate to the \"Properties\" tab\n3. Find \"Streaming Enabled\" and uncheck the box to disable it"
+            "content": "To ensure you can see our UIs, make sure streamingEnabled is set to false. Here's how to do that:\n\n1. Click on \"Workspace\"\n2. Navigate to the \"Properties\" tab\n3. Find \"streamingEnabled\" and uncheck the box to disable it"
     },
     "studio_testing": {
         "name": "Studio Testing",
