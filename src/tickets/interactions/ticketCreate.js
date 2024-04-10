@@ -7,6 +7,7 @@ const { ticketCategory, supportRoleId } = require('../../../config.json');
 const { EmbedBuilder } = require('discord.js');
 
 const ticketNewChannelEmbed = require('../embeds/ticketNewChannel');
+const responses = require('../../utils/responses.json');
 
 module.exports = {
     name: 'create',
@@ -71,8 +72,30 @@ module.exports = {
                 // Send new channel message
                 c.send(ticketNewChannelEmbed(interaction, modalResults));
 
-                // Ping the interaction user and then delete the message
-                //c.send(`<@${interaction.user.id}>`).then((m) => m.delete());
+                // Autoresponses
+                if (ticketOptionsType != 'support') return;
+
+                function autoRespond(prop, answerName, keywords) {
+                    const userResponse = prop.value.toLowerCase();
+
+                    if (keywords.includes(userResponse)) {
+                        const answer = responses[answerName];
+
+                        c.send({
+                            embeds: [
+                                new EmbedBuilder()
+                                    .setColor('#2f3137')
+                                    .setTitle(answer.name)
+                                    .setDescription(answer.content)
+                            ]
+                        });
+                    }
+                }
+
+                autoRespond(modalResults[1], 'studio_testing', ['yes', 'yea', 'true', 'positive']);
+                autoRespond(modalResults[2], 'streaming_enabled', ['yes', 'yea', 'true', 'positive']);
+                autoRespond(modalResults[2], 'http_enabled', ['no', 'nope', 'nah', 'negative', 'false']);
+                autoRespond(modalResults[3], 'game_ownership', ['no', 'nope', 'nah', 'negative', 'false']);
             });
     }
 };

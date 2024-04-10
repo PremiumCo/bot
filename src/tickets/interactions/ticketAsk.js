@@ -37,7 +37,7 @@ module.exports = {
                     style: TextInputStyle.Short
                 },
                 {
-                    label: 'Is HTTPS enabled?',
+                    label: 'Is HTTPS on and StreamingEnabled unchecked?',
                     style: TextInputStyle.Short
                 },
                 {
@@ -70,7 +70,7 @@ module.exports = {
                 },
                 {
                     label: 'Who would you like to transfer to?',
-                    style: TextInputStyle.Short,
+                    style: TextInputStyle.Short
                 }
             ],
             other: [

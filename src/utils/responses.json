@@ -10,5 +10,9 @@
     "http_enabled": {
         "name": "HTTP Enabled",
         "content": "Our products require HTTP requests to be enabled. Here's how to do that:\n\n1. Click on \"Game Settings\"\n2. Go to \"Security\"\n3. Turn on \"Allow HTTP Requests\""
+    },
+    "game_ownership": {
+        "name": "Game Ownership",
+        "content": "You must be the owner of the game or group to use our products."
     }
 }

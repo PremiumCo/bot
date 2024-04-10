@@ -24,6 +24,10 @@ module.exports = {
                     {
                         name: 'HTTP Enabled',
                         value: 'http_enabled'
+                    },
+                    {
+                        name: 'Game Ownership',
+                        value: 'game_ownership'
                     }
                 )
         ),
