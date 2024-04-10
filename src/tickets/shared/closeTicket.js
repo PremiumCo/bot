@@ -4,7 +4,7 @@
 
 const { EmbedBuilder } = require('discord.js');
 const discordTranscripts = require('discord-html-transcripts');
-const { ticketLogsChannel } = require('../../../config.json');
+const logMessage = require('./logger');
 
 async function closeTicket(interaction) {
     const ticketClosedLogEmbed = new EmbedBuilder()
@@ -23,14 +23,14 @@ async function closeTicket(interaction) {
             interaction.channel
         );
 
-        await interaction.guild.channels
-            .fetch(ticketLogsChannel)
-            .then((channel) =>
-                channel.send({
-                    embeds: [ticketClosedLogEmbed],
-                    files: [attachment]
-                })
-            );
+        logMessage(
+            interaction,
+            {
+                embeds: [ticketClosedLogEmbed],
+                files: [attachment]
+            },
+            'transcript'
+        );
 
         interaction.channel.delete('Ticket closed.');
     } catch (error) {
