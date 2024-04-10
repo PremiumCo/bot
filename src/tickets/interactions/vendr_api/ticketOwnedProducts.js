@@ -80,7 +80,6 @@ module.exports = {
             embeds: [
                 new EmbedBuilder()
                     .setColor('#2f3137')
-                    .setDescription('Nice')
                     .addFields(
                         {
                             name: 'Products',
