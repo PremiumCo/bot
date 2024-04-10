@@ -69,6 +69,8 @@ module.exports = {
 
         let ownedProducts = [];
 
+        console.log(ownedProducts)
+
         userData.Licences.forEach((licence) => {
             if (productTable.hasOwnProperty(licence.Product)) {
                 ownedProducts.push(productTable[licence.Product]);
