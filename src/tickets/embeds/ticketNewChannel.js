@@ -35,11 +35,16 @@ const embed = (interaction, modalResults) => {
         .setCustomId('ticket:close-panel')
         .setLabel('Close Ticket')
         .setStyle(ButtonStyle.Secondary);
+    
+    const productButton = new ButtonBuilder()
+        .setCustomId('ticket:owned-products')
+        .setLabel('Owned Products')
+        .setStyle(ButtonStyle.Secondary);
 
     return {
         content: `<@${interaction.user.id}>`,
         embeds: [newChannelEmbed],
-        components: [new ActionRowBuilder().addComponents(newChannelOptions)]
+        components: [new ActionRowBuilder().addComponents(newChannelOptions, productButton)]
     };
 };
 
