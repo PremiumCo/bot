@@ -73,13 +73,6 @@ module.exports = {
 
                 // Ping the interaction user and then delete the message
                 //c.send(`<@${interaction.user.id}>`).then((m) => m.delete());
-
-            /*
-                            {
-                name: 'Owned Products',
-                value: ownedProducts ? ownedProducts.map((product) => `- ${product.name}`).join('\n') : 'None'
-            }
-            */
             });
     }
 };
