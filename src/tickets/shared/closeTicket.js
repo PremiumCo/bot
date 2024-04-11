@@ -1,6 +1,6 @@
 //import { EmbedBuilder } from 'discord.js';
 //import * as discordTranscripts from 'discord-html-transcripts';
-//import { ticketLogsChannel } from '../../../config.json';
+
 
 const { EmbedBuilder } = require('discord.js');
 const discordTranscripts = require('discord-html-transcripts');
@@ -17,12 +17,14 @@ async function closeTicket(interaction) {
             text: 'Closed at'
         })
         .setTimestamp();
-
+    
+    
     try {
         const attachment = await discordTranscripts.createTranscript(
             interaction.channel
         );
 
+        
         logMessage(
             interaction,
             {

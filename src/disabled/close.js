@@ -3,8 +3,8 @@
 //import closeTicket from '../../tickets/shared/closeTicket';
 
 const { SlashCommandBuilder } = require('discord.js');
-const { ticketCategory } = require('../../../config.json');
-const closeTicket = require('../../tickets/shared/closeTicket');
+const { ticketCategory } = require('../../config.json');
+const closeTicket = require('../tickets/shared/closeTicket');
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -27,7 +27,6 @@ module.exports = {
                 ephemeral: true
             });
 
-        interaction.deferReply();
         await closeTicket(interaction);
     }
 };

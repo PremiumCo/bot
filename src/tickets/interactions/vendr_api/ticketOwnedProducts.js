@@ -69,6 +69,7 @@ module.exports = {
 
         let ownedProducts = [];
 
+        // Delete later?
         console.log(ownedProducts)
 
         userData.Licences.forEach((licence) => {
