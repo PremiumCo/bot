@@ -4,11 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "tsx watch ./src/index.js",
-        "build": "tsc src/index.js --outDir dist/ --module commonjs es5 --allowJs",
         "start": "node src/index.js",
-        "format": "prettier --write .",
-        "deploy": "npx tsx ./src/deploy.js"
+        "format": "prettier --write ."
     },
     "keywords": [],
     "author": "",
