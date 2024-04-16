@@ -82,12 +82,13 @@ module.exports = {
             embeds: [
                 new EmbedBuilder()
                     .setColor('#2f3137')
-                    .setTitle('Products')
-                    .setDescription(
-                        ownedProducts
-                            .map((product) => `- ${product}`)
-                            .join('\n')
-                    )
+                    .setTitle("Owned Products")
+                    .addFields({
+                    name: 'Products',
+                    value: ownedProducts
+                        .map((product) => `- ${product}`)
+                        .join('\n')
+                })
             ],
             ephemeral: true
         });
