@@ -80,12 +80,14 @@ module.exports = {
 
         return interaction.reply({
             embeds: [
-                new EmbedBuilder().setColor('#2f3137').addFields({
-                    name: 'Products',
-                    value: ownedProducts
-                        .map((product) => `- ${product}`)
-                        .join('\n')
-                })
+                new EmbedBuilder()
+                    .setColor('#2f3137')
+                    .setTitle('Products')
+                    .setDescription(
+                        ownedProducts
+                            .map((product) => `- ${product}`)
+                            .join('\n')
+                    )
             ],
             ephemeral: true
         });
