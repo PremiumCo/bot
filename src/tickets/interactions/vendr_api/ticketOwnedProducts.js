@@ -57,7 +57,9 @@ module.exports = {
                 embeds: [
                     new EmbedBuilder()
                         .setColor('#2f3137')
-                        .setDescription(`No products owned by <@${ticketCreator}>`)
+                        .setDescription(
+                            `No products owned by <@${ticketCreator}>`
+                        )
                 ],
                 ephemeral: true
             });
@@ -69,20 +71,29 @@ module.exports = {
 
         let ownedProducts = [];
 
-        // Delete later?
-        console.log(ownedProducts)
-
         userData.Licences.forEach((licence) => {
             if (productTable.hasOwnProperty(licence.Product)) {
                 ownedProducts.push(productTable[licence.Product]);
             }
         });
 
+        if (Object.keys(ownedProducts).length == 0) {
+            return interaction.reply({
+                embeds: [
+                    new EmbedBuilder()
+                        .setColor('#2f3137')
+                        .setDescription(
+                            `No products owned by <@${ticketCreator}>`
+                        )
+                ],
+                ephemeral: true
+            });
+        }
+
         return interaction.reply({
             embeds: [
                 new EmbedBuilder()
                     .setColor('#2f3137')
-                    .setTitle("Owned Products")
                     .addFields({
                     name: 'Products',
                     value: ownedProducts
