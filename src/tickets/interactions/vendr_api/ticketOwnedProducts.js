@@ -49,11 +49,13 @@ let productTable;
 module.exports = {
     name: 'owned-products',
     async execute(interaction) {
+        await interaction.deferReply({ ephemeral: true });
+
         const ticketCreator = interaction.message.mentions.users.first().id;
         const userData = await getUserData(ticketCreator);
 
         if (userData.Licences == undefined) {
-            return interaction.reply({
+            return interaction.editReply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor('#2f3137')
@@ -78,7 +80,7 @@ module.exports = {
         });
 
         if (Object.keys(ownedProducts).length == 0) {
-            return interaction.reply({
+            return interaction.editReply({
                 embeds: [
                     new EmbedBuilder()
                         .setColor('#2f3137')
@@ -90,7 +92,7 @@ module.exports = {
             });
         }
 
-        return interaction.reply({
+        return interaction.editReply({
             embeds: [
                 new EmbedBuilder()
                     .setColor('#2f3137')
