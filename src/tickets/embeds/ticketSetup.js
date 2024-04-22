@@ -37,9 +37,12 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setDescription('Any other type of ticket.')
     ]);
 
+// make the embed silent
+
 const embed = {
     embeds: [ticketEmbed],
-    components: [new ActionRowBuilder().addComponents(ticketOptions)]
+    components: [new ActionRowBuilder().addComponents(ticketOptions)],
+    flags: [MessageFlags.SuppressNotifications]
 };
 
 module.exports = embed;
