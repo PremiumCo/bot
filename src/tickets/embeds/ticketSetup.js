@@ -7,7 +7,7 @@ import {
 } from 'discord.js';
 */
 
-const { EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require('discord.js');
+const { EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, MessageFlags } = require('discord.js');
 
 const ticketEmbed = new EmbedBuilder()
     .setColor('#2f3137')
