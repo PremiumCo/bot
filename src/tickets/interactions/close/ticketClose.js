@@ -9,10 +9,14 @@ module.exports = {
         const ticketCreator = interaction.message.mentions.users.first().id;
         
         if (interaction.user.id != ticketCreator) {
-            await interaction.client.users.send(
-                ticketCreator,
-                ticketFeedbackEmbed(ticketCreator, interaction.user.id)
-            );
+            try {
+                await interaction.client.users.send(
+                    ticketCreator,
+                    ticketFeedbackEmbed(ticketCreator, interaction.user.id)
+                );
+            } catch {
+                console.log(`${ticketCreator} has disabled DMs, unable to send feedback.`);
+            }
         }
 
         await closeTicket(interaction);
