@@ -6,9 +6,11 @@ const ticketFeedbackEmbed = require('../../embeds/ticketFeedback');
 module.exports = {
     name: 'close',
     async execute(interaction) {
-        const ticketCreator = interaction.message.mentions.users.first().id;
-        
+        const ticketCreator = interaction.message.mentions.users.first().id || "User Left";
+
         if (interaction.user.id != ticketCreator) {
+            if (interaction.user.id == "User Left") return;
+
             try {
                 await interaction.client.users.send(
                     ticketCreator,
