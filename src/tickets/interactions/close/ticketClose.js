@@ -10,6 +10,7 @@ module.exports = {
 
         if (interaction.user.id != ticketCreator) {
             if (interaction.user.id == "User Left") return;
+            // Check if the closer either has the support team role or is the ticket creator
 
             try {
                 await interaction.client.users.send(
