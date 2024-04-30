@@ -5,7 +5,7 @@ const embed = (ticketCreator, ticketCloser) => {
         .setColor('#2f3137')
         .setTitle('Ticket Closed')
         .setDescription(
-            'Thank you for reaching out to us. We hope we were able to assist you.\n\nWe would appreciate it if you could take a moment to provide feedback on your experience with the buttons below.'
+            'Thank you for reaching out to us. We hope we were able to assist you.\n\nWe would appreciate it if you could take a moment to provide feedback on your experience with the buttons below. Please leave a honest review so we can work on a better team!'
         )
         .setFields(
             {
