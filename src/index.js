@@ -28,7 +28,7 @@ const {
 const { get } = require('http');
 
 const client = new Client({
-    intents: [GatewayIntentBits.Guilds],
+    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
     presence: {
         status: 'online',
         activities: [
