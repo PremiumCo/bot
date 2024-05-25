@@ -32,6 +32,10 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('transfer')
             .setDescription('Transfering your product licenses to other accounts.'),
         new StringSelectMenuOptionBuilder()
+            .setLabel('Applications')
+            .setValue('app')
+            .setDescription('Application-related tickets.'),
+        new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')
             .setDescription('Any other type of ticket.')

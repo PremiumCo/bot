@@ -73,6 +73,17 @@ module.exports = {
                     style: TextInputStyle.Short
                 }
             ],
+            app: [
+                {
+                    label: 'What are you applying for?',
+                    placeholder: 'Role Name',
+                    style: TextInputStyle.Short
+                },
+                {
+                    label: 'What can you offer for Premium?',
+                    style: TextInputStyle.Paragraph,
+                }
+            ],
             other: [
                 {
                     label: 'What is your question?',
