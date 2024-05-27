@@ -37,7 +37,7 @@ module.exports = {
                     style: TextInputStyle.Short
                 },
                 {
-                    label: 'Is HTTPS on and StreamingEnabled unchecked?',
+                    label: 'Is HTTPS enabled?',
                     style: TextInputStyle.Short
                 },
                 {
@@ -62,26 +62,15 @@ module.exports = {
                     placeholder: 'Please describe your question in detail.'
                 }
             ],
-            transfer: [
+            purchase: [
                 {
-                    label: 'What product(s) would you like to transfer?',
-                    placeholder: 'Product Name',
+                    label: 'Are you looking to pay with USD?',
                     style: TextInputStyle.Short
                 },
                 {
-                    label: 'Who would you like to transfer to?',
-                    style: TextInputStyle.Short
-                }
-            ],
-            app: [
-                {
-                    label: 'What are you applying for?',
-                    placeholder: 'Role Name',
-                    style: TextInputStyle.Short
-                },
-                {
-                    label: 'What can you offer for Premium?',
-                    style: TextInputStyle.Paragraph,
+                    label: 'What product(s) are you looking to purchase?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Product Name'
                 }
             ],
             other: [
@@ -90,6 +79,23 @@ module.exports = {
                     style: TextInputStyle.Paragraph,
                     placeholder: 'Please describe your question in detail.'
                 }
+            ],
+            partnership: [
+                {
+                    label: 'Do you fit our partnership requirments?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Yes/No'
+                },
+                {
+                    label: 'Whats your server link?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'discord.gg/----?'
+                },
+                {
+                    label: 'Why should we partner with you?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'You should partner with XXXXXX Because....'
+                }               
             ]
         };
 

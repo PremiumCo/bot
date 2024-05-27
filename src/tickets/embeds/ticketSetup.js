@@ -7,7 +7,7 @@ import {
 } from 'discord.js';
 */
 
-const { EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder, MessageFlags } = require('discord.js');
+const { EmbedBuilder, StringSelectMenuBuilder, StringSelectMenuOptionBuilder, ActionRowBuilder } = require('discord.js');
 
 const ticketEmbed = new EmbedBuilder()
     .setColor('#2f3137')
@@ -28,25 +28,23 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('question')
             .setDescription('Questions about products.'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('License Transfers')
-            .setValue('transfer')
-            .setDescription('Transfering your product licenses to other accounts.'),
-        new StringSelectMenuOptionBuilder()
-            .setLabel('Applications')
-            .setValue('app')
-            .setDescription('Application-related tickets.'),
+            .setLabel('Product Purchasing')
+            .setValue('purchase')
+            .setDescription(
+                'Purchasing products with USD or other currencies.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')
-            .setDescription('Any other type of ticket.')
+            .setDescription('Any other type of ticket.'),
+        new StringSelectMenuOptionBuilder()
+            .setLabel('Partnership Application')
+            .setValue('partnership')
+            .setDescription('Apply to become a partner.')
     ]);
-
-// make the embed silent
 
 const embed = {
     embeds: [ticketEmbed],
-    components: [new ActionRowBuilder().addComponents(ticketOptions)],
-    flags: [MessageFlags.SuppressNotifications]
+    components: [new ActionRowBuilder().addComponents(ticketOptions)]
 };
 
 module.exports = embed;
