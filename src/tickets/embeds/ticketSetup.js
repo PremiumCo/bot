@@ -28,18 +28,18 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('question')
             .setDescription('Questions about products.'),
         new StringSelectMenuBuilder()
-        .setLabel('Product(s) Transfers')
-        .setValue('transfer')
-        .setDescription('Transfer Prodcuts from one account to another.'),
+            .setLabel('Product(s) Transfers')
+            .setValue('transfer')
+            .setDescription('Transfer Prodcuts from one account to another.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Product Purchasing')
             .setValue('purchase')
             .setDescription(
                 'Purchasing products with USD or other currencies.'),
          new StringSelectMenuOptionBuilder()
-                .setLabel('Partnership Application')
-                .setValue('partnership')
-                .setDescription('Apply to become a partner.'),
+             .setLabel('Partnership Application')
+             .setValue('partnership')
+             .setDescription('Apply to become a partner.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')
