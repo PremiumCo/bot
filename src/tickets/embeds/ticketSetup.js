@@ -32,14 +32,15 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('purchase')
             .setDescription(
                 'Purchasing products with USD or other currencies.'),
+         new StringSelectMenuOptionBuilder()
+                .setLabel('Partnership Application')
+                .setValue('partnership')
+                .setDescription('Apply to become a partner.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')
-            .setDescription('Any other type of ticket.'),
-        new StringSelectMenuOptionBuilder()
-            .setLabel('Partnership Application')
-            .setValue('partnership')
-            .setDescription('Apply to become a partner.')
+            .setDescription('Any other type of ticket.')
+        
     ]);
 
 const embed = {
