@@ -82,22 +82,22 @@ module.exports = {
                 {
                     label: 'What Product(s)',
                     style: TextInputStyle.Short,
-                    placeholder: 'Product Names/(or say all to make it easy)'
+                    placeholder: 'Product Names/or say all to make it easy'
                 },
                 {
                     label: 'Are they in our discord?',
                     style: TextInputStyle.Short,
-                    placeholder: 'Yes/No (no- then have them join and reopen ticket.)'
+                    placeholder: 'Yes/No, then have them join and reopen ticket.'
                 },
                 {
                     label: 'Are they linked to VENDER?',
                     style: TextInputStyle.Short,
-                    placeholder: 'Yes/No (no- then have them link and reopen ticket.)'
+                    placeholder: 'Yes/No, then have them link and reopen ticket.'
                 },
                 {
                     label: 'Whats the transfers account discord user?',
                     style: TextInputStyle.Short,
-                    placeholder: '@masonnn'
+                    placeholder: 'masonnn'
                 }            
             ],
             other: [
