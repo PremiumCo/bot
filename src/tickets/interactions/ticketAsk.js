@@ -73,30 +73,6 @@ module.exports = {
                     placeholder: 'Product Name'
                 }
             ],
-            other: [
-                {
-                    label: 'What is your question?',
-                    style: TextInputStyle.Paragraph,
-                    placeholder: 'Please describe your question in detail.'
-                }
-            ],
-            partnership: [
-                {
-                    label: 'Do you fit our partnership requirments?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Yes/No'
-                },
-                {
-                    label: 'Whats your server link?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'discord.gg/----?'
-                },
-                {
-                    label: 'Why should we partner with you?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'You should partner with XXXXXX Because....'
-                }               
-            ],
             transfer: [
                 {
                     label: 'Are you gifting a product or transfering to a new account?',
@@ -123,6 +99,30 @@ module.exports = {
                     style: TextInputStyle.Short,
                     placeholder: '@masonnn'
                 }            
+            ],
+            other: [
+                {
+                    label: 'What is your question?',
+                    style: TextInputStyle.Paragraph,
+                    placeholder: 'Please describe your question in detail.'
+                }
+            ],
+            partnership: [
+                {
+                    label: 'Do you fit our partnership requirments?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Yes/No'
+                },
+                {
+                    label: 'Whats your server link?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'discord.gg/----?'
+                },
+                {
+                    label: 'Why should we partner with you?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'You should partner with XXXXXX Because....'
+                }               
             ]
         };
 
