@@ -42,7 +42,7 @@ const embed = (interaction, modalResults) => {
         .setStyle(ButtonStyle.Secondary);
 
     return {
-        content: `<@${interaction.user.id}>`,
+        content: `<@${interaction.user.id}> <@&841785398997155900>`,
         embeds: [newChannelEmbed],
         components: [new ActionRowBuilder().addComponents(newChannelOptions, productButton)]
     };
