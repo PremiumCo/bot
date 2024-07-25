@@ -36,7 +36,7 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('other')
             .setDescription('Any other type of ticket.'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Trasnfers')
+            .setLabel('Transfers')
             .setValue('transfer')
             .setDescription('Transfer Products'),
         new StringSelectMenuOptionBuilder()
