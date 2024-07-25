@@ -24,10 +24,6 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('support')
             .setDescription('Support for any product related issues.'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Trasnfers')
-            .setValue('transfer')
-            .setDescription('Transfer Products'),
-        new StringSelectMenuOptionBuilder()
             .setLabel('Product Purchasing')
             .setValue('purchase')
             .setDescription(
@@ -39,7 +35,15 @@ const ticketOptions = new StringSelectMenuBuilder()
         new StringSelectMenuOptionBuilder()
             .setLabel('Other')
             .setValue('other')
-            .setDescription('Any other type of ticket.')
+            .setDescription('Any other type of ticket.'),
+        new StringSelectMenuOptionBuilder()
+            .setLabel('Trasnfers')
+            .setValue('transfer')
+            .setDescription('Transfer Products'),
+        new StringSelectMenuOptionBuilder()
+            .setLabel('Giveaway/Promotion')
+            .setValue('promotional')
+            .setDescription('Transfer Products')
         
     ]);
 

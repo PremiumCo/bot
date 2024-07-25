@@ -106,6 +106,25 @@ module.exports = {
                     style: TextInputStyle.Short,
                     placeholder: 'masonnn'
                 },            
+            ],
+            promotional: [
+                {
+                    label: 'What are you wanting to claim?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Name Everything Here'
+                },
+                {
+                    label: 'Promotion Type?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Giveaway, Promotion, BOGO, etc.'
+                },
+                {
+                    label: 'Do you understand that your product(s) choices are final?',
+                    style: TextInputStyle.Short,
+                    placeholder: 'Yes/No (no = close ticket)'
+                },
+
+
             ]
         };
 
