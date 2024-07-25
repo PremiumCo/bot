@@ -50,18 +50,6 @@ module.exports = {
                     placeholder: 'Please describe your issue.'
                 }
             ],
-            question: [
-                {
-                    label: 'What product(s) do you have a question about?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Product Name'
-                },
-                {
-                    label: 'What is your question?',
-                    style: TextInputStyle.Paragraph,
-                    placeholder: 'Please describe your question in detail.'
-                }
-            ],
             purchase: [
                 {
                     label: 'Are you looking to pay with USD?',
@@ -117,7 +105,7 @@ module.exports = {
                     label: 'Whats the transfers account discord user?',
                     style: TextInputStyle.Short,
                     placeholder: 'masonnn'
-                }            
+                },            
             ]
         };
 

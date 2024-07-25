@@ -24,10 +24,6 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('support')
             .setDescription('Support for any product related issues.'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Product Questions')
-            .setValue('question')
-            .setDescription('Questions about products.'),
-        new StringSelectMenuOptionBuilder()
             .setLabel('Trasnfers')
             .setValue('transfer')
             .setDescription('Transfer Products'),
