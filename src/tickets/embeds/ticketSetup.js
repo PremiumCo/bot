@@ -27,7 +27,7 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setLabel('Product Questions')
             .setValue('question')
             .setDescription('Questions about products.'),
-            new StringSelectMenuOptionBuilder()
+        new StringSelectMenuOptionBuilder()
             .setLabel('Trasnfers')
             .setValue('transfer')
             .setDescription('Transfer Products'),
