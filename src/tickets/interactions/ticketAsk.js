@@ -99,11 +99,6 @@ module.exports = {
             ],
             transfer: [
                 {
-                    label: 'Are you gifting a product or transfering to a new account?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Gift/Transfer'
-                },
-                {
                     label: 'What Product(s)',
                     style: TextInputStyle.Short,
                     placeholder: 'Product Names/or say all to make it easy'
