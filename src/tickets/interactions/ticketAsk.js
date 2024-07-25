@@ -119,7 +119,7 @@ module.exports = {
                     placeholder: 'Giveaway, Promotion, BOGO, etc.'
                 },
                 {
-                    label: 'Do you understand that your product(s) choices are final?',
+                    label: 'Understand that your choices are final?',
                     style: TextInputStyle.Short,
                     placeholder: 'Yes/No (no = close ticket)'
                 },

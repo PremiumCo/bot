@@ -23,11 +23,10 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setLabel('Product Help Support')
             .setValue('support')
             .setDescription('Support for any product related issues.'),
-        new StringSelectMenuOptionBuilder()
-            .setLabel('Product Purchasing')
-            .setValue('purchase')
-            .setDescription(
-                'Purchasing products with USD or other currencies.'),
+         new StringSelectMenuOptionBuilder()
+            .setLabel('Giveaway/Promotion')
+            .setValue('promotional')
+            .setDescription('Transfer Products'),
          new StringSelectMenuOptionBuilder()
              .setLabel('Partnership Application')
              .setValue('partnership')
@@ -41,9 +40,10 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setValue('transfer')
             .setDescription('Transfer Products'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Giveaway/Promotion')
-            .setValue('promotional')
-            .setDescription('Transfer Products')
+            .setLabel('Product Purchasing')
+            .setValue('purchase')
+            .setDescription(
+                'Purchasing products with USD or other currencies.'),
         
     ]);
 
