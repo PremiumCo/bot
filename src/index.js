@@ -33,7 +33,7 @@ const client = new Client({
         status: 'online',
         activities: [
             {
-                name: 'Premium Tickets',
+                name: '🛠️ Maintenance ',
                 type: ActivityType.Listening
             }
         ]
