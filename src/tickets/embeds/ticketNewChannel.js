@@ -14,7 +14,7 @@ const embed = (interaction, modalResults) => {
         .setColor('#2f3137')
         .setTitle('New Ticket Created')
         .setDescription(
-            `Thanks for creating a ticket. You will be assisted shortly by one of our Team Members. \n\n Please remember to not Ping support team. We will respond to your ticket in the order it was made. \n\n Please do not close your own ticket! It bugs our system.`
+            `Thanks for creating a ticket. You will be assisted shortly by one of our Team Members. \n\n Please remember to NOT Ping support team. We will respond to your ticket in the order it was made. \n\n Please do not close your own ticket! It bugs our system.`
         )
         .addFields(
             modalResults.map((result) => ({
