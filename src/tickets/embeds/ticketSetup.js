@@ -23,27 +23,14 @@ const ticketOptions = new StringSelectMenuBuilder()
             .setLabel('Product Help Support')
             .setValue('support')
             .setDescription('Support for any product related issues.'),
-         new StringSelectMenuOptionBuilder()
-            .setLabel('Giveaway/Promotion')
-            .setValue('promotional')
-            .setDescription('Transfer Products'),
-         new StringSelectMenuOptionBuilder()
-             .setLabel('Partnership Application')
-             .setValue('partnership')
-             .setDescription('Apply to become a partner.'),
-        new StringSelectMenuOptionBuilder()
-            .setLabel('Other')
-            .setValue('other')
-            .setDescription('Any other type of ticket.'),
         new StringSelectMenuOptionBuilder()
             .setLabel('Transfers')
             .setValue('transfer')
             .setDescription('Transfer Products'),
         new StringSelectMenuOptionBuilder()
-            .setLabel('Product Purchasing')
-            .setValue('purchase')
-            .setDescription(
-                'Purchasing products with USD or other currencies.'),
+            .setLabel('Other')
+            .setValue('other')
+            .setDescription('Any other type of ticket.'),
         
     ]);
 

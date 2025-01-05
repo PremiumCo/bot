@@ -50,40 +50,12 @@ module.exports = {
                     placeholder: 'Please describe your issue.'
                 }
             ],
-            purchase: [
-                {
-                    label: 'Are you looking to pay with USD?',
-                    style: TextInputStyle.Short
-                },
-                {
-                    label: 'What product(s) are you looking to purchase?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Product Name'
-                }
-            ],
             other: [
                 {
                     label: 'What is your question?',
                     style: TextInputStyle.Paragraph,
                     placeholder: 'Please describe your question in detail.'
                 }
-            ],
-            partnership: [
-                {
-                    label: 'Do you fit our partnership requirments?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Yes/No'
-                },
-                {
-                    label: 'Whats your server link?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'discord.gg/----?'
-                },
-                {
-                    label: 'Why should we partner with you?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'You should partner with XXXXXX Because....'
-                }               
             ],
             transfer: [
                 {
@@ -106,25 +78,6 @@ module.exports = {
                     style: TextInputStyle.Short,
                     placeholder: 'masonnn'
                 },            
-            ],
-            promotional: [
-                {
-                    label: 'What are you wanting to claim?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Name Everything Here'
-                },
-                {
-                    label: 'Promotion Type?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Giveaway, Promotion, BOGO, etc.'
-                },
-                {
-                    label: 'Understand that your choices are final?',
-                    style: TextInputStyle.Short,
-                    placeholder: 'Yes/No (no = close ticket)'
-                },
-
-
             ]
         };
 

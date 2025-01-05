@@ -11,12 +11,14 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "axios": "^1.7.7",
         "discord-html-transcripts": "^3.2.0",
         "discord.js": "^14.14.1",
-        "node-fetch": "2"
+        "node-fetch": "2",
+        "string-similarity": "^4.0.4"
     },
     "devDependencies": {
-        "dotenv": "^16.4.4",
+        "dotenv": "^16.4.5",
         "prettier": "^3.2.5",
         "tsx": "^4.7.1"
     }

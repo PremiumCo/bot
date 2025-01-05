@@ -9,6 +9,7 @@ const path = require('path');
 
 const { fileURLToPath } = require('node:url');
 const { dirname } = require('node:path');
+const autoresponder = require('../src/events/messageCreate'); // Import the autoresponder
 
 /*
 import {
@@ -28,7 +29,7 @@ const {
 const { get } = require('http');
 
 const client = new Client({
-    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
+    intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMembers],
     presence: {
         status: 'online',
         activities: [
@@ -82,5 +83,7 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args));
     }
 }
+
+client.on(autoresponder.name, autoresponder.execute);
 
 client.login(process.env.TOKEN);
